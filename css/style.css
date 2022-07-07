@@ -103,7 +103,7 @@ header {
     padding: 1em;
 }
 .navigate {
-    position: fixed;
+    position: absolute;  /* removed it from fixed */
     background-color: var(--clr-accent);
     color: var(--clr-light);
     top: 0;
@@ -142,7 +142,7 @@ strong { font-weight: var(--fw-bold)}
 }
 
 .nav__link:hover {
-    color: var(--clr-vision);
+    color: var(--clr-darker-pink);
 }
 
 .intro__img {
@@ -241,6 +241,33 @@ strong { font-weight: var(--fw-bold)}
     }
 }
 
+/* Project section */
+.section__title--projects {
+    color: var(--clr-dark);
+    position: relative;
+    text-align: center;
+}
+
+.servicesText.card { 
+    height: 280px;
+    cursor: pointer;
+}
+.servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+.card-title {
+    text-align: center;
+}
+
+.card:hover .servicesIcon {
+    color: var(--clr-ice);
+}
+
+.servicesText:hover {
+    border: 1px solid var(--clr-ice);
+}
 .my-contact {
     background-color: var(--clr-accent);
     background-size: cover;
