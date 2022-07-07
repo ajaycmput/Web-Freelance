@@ -1,0 +1,247 @@
+*
+*::before,
+::after {
+    box-sizing: border-box;
+}
+
+/* Custom properties */
+:root {
+    --ff-primary: 'Lora', serif;
+    --ff-secondary: 'Roboto Slab', serif;
+
+    --fw-reg: 400;
+    --fw-bold: 700;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-vision: #fef2f2;
+    --clr-accent: #cfd9df;
+    --clr-ice: #16e0bd;
+    --clr-darker-pink: #e75480;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+    0.125 0.125 0.25 rgba(0,0,0,0.15);
+}
+
+@media (min-width: 800px){
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.section__title {
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.section__title--intro {
+    display: inline-block;
+    height: auto;
+    text-align: center;
+    font-weight: var(--fw-bold);
+    padding: 3rem;
+    line-height: 1.5;
+    margin-right: 5rem;
+    
+    
+}
+
+.home {
+    text-align: center;
+}
+
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase; /* ensures all buttons are all capsized */
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: all .25s;
+    margin-bottom: 5em;
+    text-align: center;
+}
+
+.btn:hover{
+    letter-spacing: 15px;
+}
+/* General Styles */
+body {
+
+    background: var(--clr-vision);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+.navigate {
+    position: fixed;
+    background-color: var(--clr-accent);
+    color: var(--clr-light);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+}
+.nav__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+strong { font-weight: var(--fw-bold)}
+
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+.nav__item {
+    cursor: pointer;
+    padding: .5rem;
+}
+
+.nav__link {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--h3);
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    color: var(--clr-vision);
+}
+
+.intro__img {
+    width: auto;
+    height: 250px;
+    display: flex;
+    border-radius: 35%;
+    flex-direction: row;
+    box-shadow:var(--bs);
+}
+
+.hero__banner {
+    width: 300px;
+    border: none;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+
+@media (min-width: 600px) {
+    .intro__container {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .btn:hover{
+        letter-spacing: 10px;
+    }
+
+}
+
+/* My Skill Section */
+.my-skills {
+    background-color: var(--clr-accent);
+    background-size: cover;
+    color: var(--clr-dark);
+    text-align: left;
+}
+
+.section__title--skills {
+    color: var(--clr-light);
+    position: relative;
+    text-align: center;
+}
+
+.section__title--skills strong {
+    
+    padding: 0.5rem;
+    border-radius: 30%;  
+}
+
+/* creating a white line under My Skills */
+.section__title--skills::after {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-vision);
+    opacity: 0.8;
+}
+
+.skiils {
+    margin-bottom: 4em;
+}
+
+
+.skill-item {
+
+    max-width: 500px;
+    margin: 0 auto;
+    transition: transform 300ms ease-in-out;
+}
+
+.skill-item h3 {
+    background-color: var(--clr-ice);
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+}
+
+@media (min-width: 800px) {
+    .skill-list {
+        list-style: disc;
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .skill-item + .skill-item {
+        margin-left: 2em;
+    }
+}
+
+.my-contact {
+    background-color: var(--clr-accent);
+    background-size: cover;
+}
