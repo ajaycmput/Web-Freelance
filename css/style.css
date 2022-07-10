@@ -54,10 +54,31 @@ html {
     padding: 3rem;
     line-height: 1.5;
     margin-right: 5rem;
-    
-    
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 1ms ease-in-out;
+    position: relative;
 }
 
+.section__title--intro:hover{ color: var(--clr-darker-pink)}
+
+.section__title--intro::before {
+    content :" ";
+    position: absolute;
+    background: var(--clr-light);
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.section__title--intro:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
 .home {
     text-align: center;
 }
@@ -173,6 +194,7 @@ strong { font-weight: var(--fw-bold)}
     .btn:hover{
         letter-spacing: 10px;
     }
+
 
 }
 
