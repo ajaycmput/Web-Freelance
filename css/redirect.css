@@ -1,0 +1,86 @@
+*
+*::before,
+::after {
+    box-sizing: border-box;
+}
+
+/* Custom properties */
+:root {
+    --ff-primary: 'Lora', serif;
+    --ff-secondary: 'Roboto Slab', serif;
+
+    --fw-reg: 400;
+    --fw-bold: 700;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-vision: #fef2f2;
+    --clr-accent: #cfd9df;
+    --clr-ice: #16e0bd;
+    --clr-darker-pink: #e75480;
+
+    --fs-h1: 5rem;  /* I increased the size from 3rem to 5rem */
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+    0.125 0.125 0.25 rgba(0,0,0,0.15);
+}
+
+/* general styles */
+
+
+body {
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon{
+    font-size: var(--fs-h1);
+    text-align: center;
+    color: var(--clr-ice);
+}
+
+
+/* this button is not the same as the one in style.css
+    I changed some properties 
+*/
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase; /* ensures all buttons are all capsized */
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: all .25s;
+    margin-top: 3em;
+    text-align: center;
+}
+
+.btn:hover{
+    letter-spacing: 10px;
+}
