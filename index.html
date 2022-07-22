@@ -23,6 +23,9 @@
     <!--Navigagion Bar-->
     <body>
         <header>
+            <button class = "nav-toggle" aria-label = "toggle navigation">
+                <span class = "hamburger"></span>
+            </button>
             <nav class = "navigate">
                 <ul class = "nav__list">
                     <li class = "nav__item"><a href = "#home" class="nav__link"> Home</a> </li>
@@ -53,7 +56,7 @@
         </section>
 
         <!--Skills Section-->
-        <section  id="skills" class = "my-skills">
+        <section  id="skills" class = "my-skills py-5">
             <div class = "container">
                 <h1 class = "section__title section__title--skills"><strong> Certificates/Projects</strong></h1>
                 <div class ="row">
@@ -184,12 +187,12 @@
         </section>
 
         <!--Contact Me -->
-        <section class = "my-contact" id="contact">
+        <section class = "my-contact py-5 " id="contact" >
             <div class="container mt-3 contactContent">
                 <h2 class = "section__title section__title--skills"><strong>CONTACT ME</strong></h2>
     
                 <div class="row mt-4">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 mt-5" >
                         <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
                         <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
                             <div id="embedmap-canvas" style="height:100%; width:100%;max-width:100%;">
@@ -202,7 +205,7 @@
                         </div>
                     </div>
     
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 mt-5" >
                         <!-- form fields -->
                         <form method="post" action = "subscriberform.php">
                             <input type="text" class="form-control form-control-lg" placeholder="Name">
@@ -244,5 +247,13 @@
                 </li>
             </ul>
         </footer>
+
+
+
+
+
+        <!--Link javascript file-->
+        <script src = "index.js"></script>
+
     </body>
 </HTML>
