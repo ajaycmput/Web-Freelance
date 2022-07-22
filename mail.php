@@ -14,7 +14,7 @@ if (isset($_POST['submit'])){
     $headers = "From: ".$email;
 
     mail($to, $subject, $txt, $headers);
-    header("Location: redirect.html");
+    header('Location: redirect.html');
     }
 
 ?>
