@@ -129,7 +129,7 @@ header {
     background-color: var(--clr-accent);
     background-image: url(navigate_bg_img.jpg);
     background-size: cover;
-    color: var(--clr-light);
+    color: var(--clr-dark);
     top: 0;
     bottom: 0;
     left: 0;
