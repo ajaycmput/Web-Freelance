@@ -1,5 +1,4 @@
 <?php 
-if (isset($_POST['submit'])){
     $name = $_POST['name'];
     $email= $_POST['emailaddress'];
     $email_subject= $_POST['message-subject']
@@ -14,6 +13,5 @@ if (isset($_POST['submit'])){
 
     mail($to, $subject, $txt, $headers);
     header("Location: redirect.html");
-    }
 
-?>
+?> 
