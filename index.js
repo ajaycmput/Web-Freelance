@@ -10,3 +10,16 @@ navLinks.forEach(link => {
         document.body.classList.remove('nav-open');
     })
 })
+
+$(window).on("scroll", function() {
+    var footer = $("footer");
+    var footerTop = footer.offset().top;
+    var windowHeight = $(window).height();
+    var scrollPos = $(window).scrollTop() + windowHeight;
+
+    if (scrollPos > footerTop) {
+      $(".zoom-text").addClass("active");
+    } else {
+      $(".zoom-text").removeClass("active");
+    }
+    });
